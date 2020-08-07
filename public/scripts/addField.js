@@ -1,14 +1,19 @@
 document.querySelector("#add-time")
-.addEventListener("click", cloneField)
+
+.addEventListener('click', cloneField)
+
+
 
 function cloneField() {
-  const newFieldContainer = document.querySelector('.schedule-item').cloneNode(true)
+    //duplica campo
+    const newtimefield = document.querySelector('.schedule-item').cloneNode(true)
+    //limpa os campos
+    const timefield = newtimefield.querySelectorAll('input')
 
-  const fields = newFieldContainer.querySelectorAll('input')
+   timefield.forEach(function(timefield){
+    timefield.value = ""
+   })
+    document.querySelector('#schedule-items').appendChild(newtimefield)
 
-  fields.forEach(function(field) {
-    field.value = ""
-  });
 
-  document.querySelector('#schedule-items').appendChild(newFieldContainer)
 }
