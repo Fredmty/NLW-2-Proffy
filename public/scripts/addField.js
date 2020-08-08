@@ -1,6 +1,6 @@
 document.querySelector("#add-time")
 
-.addEventListener('click', cloneField)
+.addEventListener("click", cloneField)
 
 
 
@@ -12,7 +12,7 @@ function cloneField() {
 
    timefield.forEach(function(timefield){
     timefield.value = ""
-   })
+   });
     document.querySelector('#schedule-items').appendChild(newtimefield)
 
 
